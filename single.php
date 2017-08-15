@@ -1,10 +1,10 @@
 <?php get_header(); ?>
 
-	<div class="row align-center" id="blogPage">
+	<div class="row expanded align-center" id="blogPage" style="background: url(<?php the_post_thumbnail_url('bg'); ?>);">
 
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-			<div class="small-12 columns animated fadeInUp">
+			<div class="small-12 columns bg">
 				<div class="meta">
 					<small>By <?php the_author(); ?> | <?php the_date(); ?> | <?php the_category(', '); ?></small>
 				</div>
@@ -17,8 +17,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="small-12 medium-8 columns animated fadeInUp">
-				<?php the_post_thumbnail('wwww'); ?>
+			<div class="small-12 medium-8 columns bg">
 				<?php the_content(); ?>
 			</div>
 

@@ -168,7 +168,7 @@ p, ul, ol, dl, dt, dd {
 	margin: 155px 0 0 0;
 }
 #blogPage {
-	margin-top: 165px;
+	margin-top: 155px;
 }
 h1.primo {
 	font-weight: 300;
@@ -249,8 +249,12 @@ h1.primo span {
 }
 .meta {
 	color: #626466;
+	padding-top: 0.5rem;
 	padding-bottom: 0.5rem;
 	border-bottom: 1px solid #e6e6e6;
+}
+.single .bg {
+	background: rgba(255,255,255,0.9);
 }
 .titleSpace {
 	border-bottom: 1px solid #e6e6e6;
@@ -285,6 +289,9 @@ h1.primo span {
 	}
 	.animated {
 		margin: 0 0 0.937rem 0;
+	}
+	.bg {
+		margin-bottom: 0;
 	}
 	.page-template-page-what-we-do .animated, .post-type-archive .animated {
 		padding: 0;
