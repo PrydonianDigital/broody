@@ -2,7 +2,8 @@ jQuery(document).foundation()
 jQuery(function() {
 	jQuery('[data-menu-underline-from-center] li').addClass('underline-from-center');
 	jQuery('.sub-menu').attr('data-submenu');
-	jQuery('#ourStory p').addClass('small-12 columns');
+	jQuery('#ourStory p').wrap('<div class="column animated fadeInUp">').addClass('foo');
+	jQuery('#pageImage h1').addClass('animated zoomIn');
 	jQuery(window).scroll(function() {
 		var winTop = jQuery(window).scrollTop();
 		if (winTop >= 80) {
@@ -21,7 +22,88 @@ function initMap() {
 	var mother = {lat: 51.5240886, lng: -0.0782075};
 	var map = new google.maps.Map(document.getElementById('map'), {
 		zoom: 16,
-		center: mother
+		center: mother,
+		scrollwheel: false,
+		styles: [
+            {elementType: 'geometry', stylers: [{color: '#626466'}]},
+            {elementType: 'labels.text.stroke', stylers: [{color: '#000000'}]},
+            {elementType: 'labels.text.fill', stylers: [{color: '#fbaa3a'}]},
+            {
+              featureType: 'administrative.locality',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#fbaa3a'}]
+            },
+            {
+              featureType: 'poi',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#fbaa3a'}]
+            },
+            {
+              featureType: 'poi.park',
+              elementType: 'geometry',
+              stylers: [{color: '#fbaa3a'}]
+            },
+            {
+              featureType: 'poi.park',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#fbaa3a'}]
+            },
+            {
+              featureType: 'road',
+              elementType: 'geometry',
+              stylers: [{color: '#fbaa3a'}]
+            },
+            {
+              featureType: 'road',
+              elementType: 'geometry.stroke',
+              stylers: [{color: '#000000'}]
+            },
+            {
+              featureType: 'road',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#fbaa3a'}]
+            },
+            {
+              featureType: 'road.highway',
+              elementType: 'geometry',
+              stylers: [{color: '#fbaa3a'}]
+            },
+            {
+              featureType: 'road.highway',
+              elementType: 'geometry.stroke',
+              stylers: [{color: '#000000'}]
+            },
+            {
+              featureType: 'road.highway',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#fbaa3a'}]
+            },
+            {
+              featureType: 'transit',
+              elementType: 'geometry',
+              stylers: [{color: '#000000'}]
+            },
+            {
+              featureType: 'transit.station',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#fbaa3a'}]
+            },
+            {
+              featureType: 'water',
+              elementType: 'geometry',
+              stylers: [{color: '#fbaa3a'}]
+            },
+            {
+              featureType: 'water',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#fbaa3a'}]
+            },
+            {
+              featureType: 'water',
+              elementType: 'labels.text.stroke',
+              stylers: [{color: '#626466'}]
+            }
+          ]
 	});
 	var marker = new google.maps.Marker({
 		position: mother,

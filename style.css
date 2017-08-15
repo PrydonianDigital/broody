@@ -37,7 +37,7 @@ h2, h4, h6 {
 	line-height: 50px;
 	background: rgba(255,255,255,0.9);
 	z-index: 1010;
-	box-shadow: 0 2px 2px rgba(98,100,102,.25);
+	box-shadow: 0 2px 2px rgba(0,0,0,0.25);
 }
 .title-bar img {
 	max-height: 50px;
@@ -47,18 +47,17 @@ h2, h4, h6 {
 .title-bar-title {
 	color: #626466;
 }
-.menu-icon {
+.title-bar .menu-icon {
 	width: 40px;
 	height: 40px;
 	line-height: 40px;
 	display: block;
 }
 .menu-icon::after {
-	content: '';
 	display: none;
 }
 #topBar {
-	box-shadow: 0 2px 2px rgba(98,100,102,.25);
+	box-shadow: 0 2px 2px rgba(0,0,0,0.25);
 	position: fixed;
 	top:0;
 	left: 0;
@@ -68,10 +67,23 @@ h2, h4, h6 {
 	max-height: 155px;
 	transition: all 0.5s ease-in-out
 }
+.custom-logo {
+	width: 125px;
+	height: 125px;
+	transition: all 0.5s ease;
+}
 .off-canvas, .off-canvas .menu, .off-canvas .drilldown a {
 	background: #626466;
 }
 .off-canvas .drilldown li.current-menu-item a, .off-canvas .drilldown li.current-menu-parent a {
+	background: #fbaa3a;
+	color: #626466
+}
+.off-canvas .drilldown li.current-menu-parent li a {
+	background: #626466;
+	color: #fbaa3a
+}
+.off-canvas .drilldown li.current-menu-parent li.current-menu-item a  {
 	background: #fbaa3a;
 	color: #626466
 }
@@ -142,6 +154,14 @@ h2, h4, h6 {
 	background-attachment: fixed !important;
 	background-position: center center !important;
 }
+#contactPage {
+	min-height: 50vh;
+	margin: 155px 0 0 0;
+	padding: 0;
+}
+#wwwwPage {
+	margin: 155px 0 0 0;
+}
 h1.primo {
 	font-weight: 300;
 	text-align: center;
@@ -156,7 +176,7 @@ h1.primo span {
 	padding: 0.9375rem;
 	color: #fff;
 	background: rgba(98,100,102,0.85);
-	box-shadow: 2px 2px 2px rgba(98,100,102,0.85);
+	box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
 	border-radius: 0.25rem;
 	overflow: hidden;
 }
@@ -164,11 +184,10 @@ h1.primo span {
 	color: #fff;
 }
 #ourStory p {
-	margin: 0.9375rem;
 	padding: 0.9375rem;
 	color: #fff;
 	background: rgba(98,100,102,0.85);
-	box-shadow: 2px 2px 2px rgba(98,100,102,0.85);
+	box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
 	border-radius: 0.25rem;
 	overflow: hidden;
 	color: #fff;
@@ -177,25 +196,46 @@ h1.primo span {
 	font-weight: 700;
 }
 .card {
+	box-shadow: 2px 2px 2px rgba(98,100,102,0.25);
+	border-radius: 0.25rem;
+}
+.post-type-archive-people .card {
 	border: 0;
 	color: #fff;
 	background: rgba(98,100,102,0.85);
-	box-shadow: 2px 2px 2px rgba(98,100,102,0.85);
-	border-radius: 0.25rem;
 	overflow: hidden;
 	color: #fff;
 }
-.card h4 {
+.post-type-archive-people .card h4 {
 	color: #fff;
 }
+.client {
+	min-height: 50vh;
+}
+.client .img {
+	padding-top: 35%;
+	background-position: center center !important;
+}
+.card-divider {
+	background: #626466;
+}
+.card-divider h4 {
+	color: #ffffff;
+}
+.wwwwImg img {
+	width: 100%;
+	height: 100%;
+}
 #map {
-	height: 25vh;
+	height: 50vh;
+	margin-bottom: 0.937rem;
 }
 #footer {
 	background: #626466;
 	color: #fff;
 	box-shadow: inset 0 2px 2px rgba(0,0,0,0.5);
 	font-size: 85%;
+	padding-top: 0.937rem;
 }
 @media screen and (max-width: 40em) {
 	#topBar {
@@ -205,6 +245,9 @@ h1.primo span {
 		height: auto;
 		padding: calc(50px + 1.874rem) 0.937rem 0.937rem 0.937rem;
 	}
+	#wwwwPage {
+		margin: calc(50px + 1.874rem) 0 0 0;
+	}
 	#ourStory p {
 		margin: 0 0 0.937rem 0;
 	}
@@ -213,5 +256,9 @@ h1.primo span {
 	}
 	.page-template-page-what-we-do .animated, .post-type-archive .animated {
 		padding: 0;
+	}
+	.client .img {
+		padding-top: 25%;
+		background-position: center center !important;
 	}
 }

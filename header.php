@@ -24,7 +24,7 @@
 	            'menu' => __( 'Top Bar Menu', 'textdomain' ),
 	            'menu_class' => 'vertical menu',
 	            'theme_location' => 'header',
-	            'items_wrap'      => '<ul id="%1$s" class="%2$s" data-drilldown="">%3$s</ul>',
+	            'items_wrap'      => '<ul id="%1$s" class="%2$s" data-drilldown="">%3$s<li class="my-static-link"><a data-open="searchForm"><i class="fa fa-search"></i></a></li></ul>',
 	            'fallback_cb' => 'f6_drill_menu_fallback',
 	            'walker' => new F6_DRILL_MENU_WALKER(),
 	        ));
@@ -40,7 +40,6 @@
 						echo '<img src="' . $image[0] . '">';
 					?>
 				</button>
-				<div class="title-bar-title">Menu</div>
 			</div>
 			<div class="row expanded align-middle" id="topBar">
 				<div class="small-2 columns logo">
@@ -55,7 +54,7 @@
 						            'menu' => __( 'Top Bar Menu', 'textdomain' ),
 						            'menu_class' => 'dropdown menu',
 						            'theme_location' => 'header',
-						            'items_wrap'      => '<ul id="%1$s" class="%2$s" data-dropdown-menu data-menu-underline-from-center>%3$s</ul>',
+						            'items_wrap'      => '<ul id="%1$s" class="%2$s" data-dropdown-menu data-menu-underline-from-center>%3$s<li class="my-static-link"><a data-open="searchForm"><i class="fa fa-search"></i></a></li></ul>',
 						            'fallback_cb' => 'f6_topbar_menu_fallback',
 						            'walker' => new F6_TOPBAR_MENU_WALKER(),
 						        ));

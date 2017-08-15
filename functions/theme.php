@@ -3,9 +3,11 @@
 	// Register Theme Features
 	function broody_theme()  {
 		add_theme_support( 'post-thumbnails' );
+		add_image_size( 'card', 400, 200, array( 'center', 'center') );
+		add_image_size( 'wwww', 840, 580, array( 'center', 'center') );
 		add_theme_support( 'custom-logo', array(
-			'height'			=> 125,
-			'width'			 => 125,
+			'height'			=> 250,
+			'width'			 => 250,
 			'flex-width' => true,
 		) );
 		add_theme_support( 'html5', array( 'search-form', 'comment-form', 'comment-list', 'gallery', 'caption' ) );
@@ -51,13 +53,39 @@
 	// Register Navigation Menus
 	function broody_menus() {
 		$locations = array(
-			'header' => __( 'Header Menu Right', 'broody' ),
-			'social' => __( 'Social Media Menu', 'broody' ),
-			'footer' => __( 'Footer Menu', 'broody' ),
+			'header' => __( 'Header Menu Right', 'broody' )
 		);
 		register_nav_menus( $locations );
 	}
 	add_action( 'init', 'broody_menus' );
+
+	function broody_sidebars() {
+		$args = array(
+			'id'			=> 'footer1',
+			'class'		 => 'menu vertical',
+			'name'		  => __( 'Footer Widgets 1', 'broody' ),
+			'before_title'  => '<h5>',
+			'after_title'   => '</h5>',
+		);
+		register_sidebar( $args );
+		$args = array(
+			'id'			=> 'footer2',
+			'class'		 => 'menu vertical',
+			'name'		  => __( 'Footer Widgets 2', 'broody' ),
+			'before_title'  => '<h5>',
+			'after_title'   => '</h5>',
+		);
+		register_sidebar( $args );
+		$args = array(
+			'id'			=> 'footer3',
+			'class'		 => 'menu vertical',
+			'name'		  => __( 'Footer Widgets 3', 'broody' ),
+			'before_title'  => '<h5>',
+			'after_title'   => '</h5>',
+		);
+		register_sidebar( $args );
+	}
+	add_action( 'widgets_init', 'broody_sidebars' );
 
 	class F6_TOPBAR_MENU_WALKER extends Walker_Nav_Menu {
 		function start_lvl( &$output, $depth = 0, $args = array() ) {

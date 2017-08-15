@@ -10,7 +10,7 @@
 	<?php endif; ?>
 
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-		<div class="small-12 medium-3 columns animated fadeInUp text-center"  style="-webkit-animation-delay: <?php echo get_post_field( 'menu_order', $post->ID); ?>s;-moz-animation-delay: <?php echo get_post_field( 'menu_order', $post->ID); ?>s;-ms-animation-delay: <?php echo get_post_field( 'menu_order', $post->ID); ?>s;animation-delay: <?php echo get_post_field( 'menu_order', $post->ID); ?>s;">
+		<div class="small-12 medium-6 large-3 columns animated fadeInUp text-center" style="-webkit-animation-delay: <?php echo get_post_field( 'menu_order', $post->ID); ?>s;-moz-animation-delay: <?php echo get_post_field( 'menu_order', $post->ID); ?>s;-ms-animation-delay: <?php echo get_post_field( 'menu_order', $post->ID); ?>s;animation-delay: <?php echo get_post_field( 'menu_order', $post->ID); ?>s;">
 			<div class="card">
 				<?php
 					if(has_post_thumbnail()) {
@@ -34,7 +34,7 @@
 						$linkedin = get_post_meta( get_the_ID(), '_wwa__linkedin', true );
 						if($linkedin !=''){
 					?>
-					<a href="" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+					<a href="<?php echo $linkedin; ?>" target="_blank"><i class="fa fa-linkedin-square"></i></a>
 					<?php
 						}
 					?>
@@ -42,7 +42,7 @@
 						$facebook = get_post_meta( get_the_ID(), '_wwa__facebook', true );
 						if($facebook !=''){
 					?>
-					<a href="" target="_blank"><i class="fa fa-facebook-square"></i></a>
+					<a href="<?php echo $facebook; ?>" target="_blank"><i class="fa fa-facebook-square"></i></a>
 					<?php
 						}
 					?>
@@ -50,7 +50,7 @@
 						$twitter = get_post_meta( get_the_ID(), '_wwa__twitter', true );
 						if($twitter !=''){
 					?>
-					<a href="" target="_blank"><i class="fa fa-twitter-square"></i></a>
+					<a href="<?php echo $twitter; ?>" target="_blank"><i class="fa fa-twitter-square"></i></a>
 					<?php
 						}
 					?>
@@ -58,7 +58,7 @@
 						$youtube = get_post_meta( get_the_ID(), '_wwa__youtube', true );
 						if($youtube !=''){
 					?>
-					<a href="" target="_blank"><i class="fa fa-youtube-square"></i></a>
+					<a href="<?php echo $youtube; ?>" target="_blank"><i class="fa fa-youtube-square"></i></a>
 					<?php
 						}
 					?>
@@ -66,7 +66,7 @@
 						$instagram = get_post_meta( get_the_ID(), '_wwa__instagram', true );
 						if($instagram !=''){
 					?>
-					<a href="" target="_blank"><i class="fa fa-instagram"></i></a>
+					<a href="<?php echo $instagram; ?>" target="_blank"><i class="fa fa-instagram"></i></a>
 					<?php
 						}
 					?>
