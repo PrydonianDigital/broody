@@ -75,6 +75,9 @@ p, ul, ol, dl, dt, dd {
 	height: 125px;
 	transition: all 0.75s ease;
 }
+.menu {
+	font-weight: 500;
+}
 .off-canvas, .off-canvas .menu, .off-canvas .drilldown a {
 	background: #626466;
 }

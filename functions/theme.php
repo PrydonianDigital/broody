@@ -20,7 +20,7 @@
 	// Register Style
 	function broody_css() {
 		wp_register_style( 'grid', get_template_directory_uri() . '/css/foundation.min.css', false, '6.3.1' );
-		wp_register_style( 'quicksilver', '//fonts.googleapis.com/css?family=Quicksand:300,400,700&subset=latin-ext', false, '6.3.1' );
+		wp_register_style( 'quicksilver', '//fonts.googleapis.com/css?family=Quicksand:400,500,700&subset=latin-ext', false, '6.3.1' );
 		wp_register_style( 'animate', '//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css', false, '6.3.1' );
 		wp_enqueue_style( 'grid' );
 		wp_enqueue_style( 'animate' );
