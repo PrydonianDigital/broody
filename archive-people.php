@@ -4,7 +4,7 @@
 	<?php
 		$page = get_page_by_title( 'who we are' );
 	?>
-	<div class="row expanded align-middle" style="background: url(<?php echo get_the_post_thumbnail_url($page->ID); ?>); background-size: cover;" id="pageImage">
+	<div class="row expanded align-middle" style="background: url(<?php echo get_the_post_thumbnail_url($page->ID, 'bg'); ?>); background-size: cover;" id="pageImage">
 	<?php else : ?>
 	<div class="row expanded align-middle" id="pageImage">
 	<?php endif; ?>

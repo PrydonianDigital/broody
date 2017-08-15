@@ -1,14 +1,6 @@
 <?php get_header(); ?>
 
-	<div class="row expanded" id="wwwwPage">
-
-		<div class="small-12 columns">
-			<h2><?php single_term_title(); ?></h2>
-		</div>
-
-	</div>
-
-	<div class="row expanded small-up-1 medium-up-3 large-up-4 align-spaced">
+	<div class="row expanded small-up-1 medium-up-3 large-up-4 align-spaced" id="pageImage" style="background: url(<?php echo get_term_meta(get_queried_object()->term_id, '_wwww_image', 'bg'); ?>);">
 
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
@@ -27,6 +19,17 @@
 		<?php endwhile; ?>
 
 		<?php else : ?>
+
+			<div class="small-12 medium-6 large-3 columns animated fadeInUp">
+				<div class="card">
+					<div class="card-divider">
+						<h4>Oh dear...</h4>
+					</div>
+					<div class="card-section">
+						<p>We couldn't find anything...</p>
+					</div>
+				</div>
+			</div>
 
 		<?php endif; ?>
 

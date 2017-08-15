@@ -1,39 +1,57 @@
 <?php
 
+	add_action( 'cmb2_init', 'wwww_page' );
+	function wwww_page() {
+		$prefix = '_wwww_';
+		$wwww = new_cmb2_box( array(
+			'id'				=> 'show_for_taxonomy_terms',
+			'title'				=> 'Demo',
+			'object_types'		=> array( 'term' ),
+			'taxonomies'		=> array( 'who-we-work-with' ),
+			'show_in_rest'		=> true
+		) );
+		$wwww->add_field( array(
+	        'title'				=> __( 'Image', 'my-slug' ),
+	        'id'				=> $prefix . 'image',
+	        'type'				=> 'file',
+	    ) );
+	}
+
 	add_action( 'cmb2_init', 'wwd_page' );
 	function wwd_page() {
 		$prefix = '_wwd_';
 		$cmb_home = new_cmb2_box( array(
-			'id'			=> 'home',
-			'title'		 => 'Page Sections',
-			'object_types'  => array( 'page' ),
-			'show_on'	  => array( 'key' => 'page-template', 'value' => 'page-what-we-do.php' ),
+			'id'				=> 'home',
+			'title'				=> 'Page Sections',
+			'object_types'		=> array( 'page' ),
+			'show_on'			=> array( 'key' => 'page-template', 'value' => 'page-what-we-do.php' ),
+			'show_in_rest'		=> true
 		) );
 
 		$home_group = $cmb_home->add_field( array(
-			'id' => $prefix . 'home',
-			'type' => 'group',
-			'options'	 => array(
-				'group_title'   => __( 'Section {#}', 'bci' ),
+			'id'				=> $prefix . 'home',
+			'type'				=> 'group',
+			'options'			=> array(
+				'group_title'	=> __( 'Section {#}', 'bci' ),
 				'add_button'	=> __( 'Add New Section', 'bci' ),
-				'remove_button' => __( 'Remove Section', 'bci' ),
-				'sortable'	  => true,
+				'remove_button'	=> __( 'Remove Section', 'bci' ),
+				'sortable'		=> true,
 			),
 		) );
 		$cmb_home->add_group_field( $home_group, array(
-			'name' => 'Icon',
-			'id'   => $prefix . '_icon',
-			'type' => 'fontawesome_icon',
+			'name'				=> 'Icon',
+			'id'				=> $prefix . '_icon',
+			'type'				=> 'fontawesome_icon',
 		) );
 		$cmb_home->add_group_field( $home_group, array(
-			'name' => 'Text Section',
-			'id'   => $prefix . '_title',
-			'type' => 'text',
+			'name'				=> 'Text Section',
+			'id'				=> $prefix . '_title',
+			'type'				=> 'text',
 		) );
 		$cmb_home->add_group_field( $home_group, array(
-			'name' => 'Text Section',
-			'id'   => $prefix . '_text',
-			'type' => 'wysiwyg',
+			'name'				=> 'Text Section',
+			'id'				=> $prefix . '_text',
+			'type'				=> 'wysiwyg',
 		) );
 	}
 
@@ -41,39 +59,40 @@
 	function people_info() {
 		$prefix = '_wwa_';
 		$cmb_people = new_cmb2_box( array(
-			'id'			=> 'person',
-			'title'		 => 'Person Info',
-			'object_types'  => array( 'people' ),
+			'id'				=> 'person',
+			'title'				=> 'Person Info',
+			'object_types'		=> array( 'people' ),
+			'show_in_rest'		=> true
 		) );
 		$cmb_people->add_field(array(
-			'name' => 'Title',
-			'id'   => $prefix . '_title',
-			'type' => 'text',
+			'name'				=> 'Title',
+			'id'				=> $prefix . '_title',
+			'type'				=> 'text',
 		) );
 		$cmb_people->add_field(array(
-			'name' => 'LinkedIn',
-			'id'   => $prefix . '_linkedin',
-			'type' => 'text_url',
+			'name'				=> 'LinkedIn',
+			'id'				=> $prefix . '_linkedin',
+			'type'				=> 'text_url',
 		) );
 		$cmb_people->add_field(array(
-			'name' => 'Facebook',
-			'id'   => $prefix . '_facebook',
-			'type' => 'text_url',
+			'name'				=> 'Facebook',
+			'id'				=> $prefix . '_facebook',
+			'type'				=> 'text_url',
 		) );
 		$cmb_people->add_field(array(
-			'name' => 'Twitter',
-			'id'   => $prefix . '_twitter',
-			'type' => 'text_url',
+			'name'				=> 'Twitter',
+			'id'				=> $prefix . '_twitter',
+			'type'				=> 'text_url',
 		) );
 		$cmb_people->add_field(array(
-			'name' => 'YouTube',
-			'id'   => $prefix . '_youtube',
-			'type' => 'text_url',
+			'name'				=> 'YouTube',
+			'id'				=> $prefix . '_youtube',
+			'type'				=> 'text_url',
 		) );
 		$cmb_people->add_field(array(
-			'name' => 'Instagram',
-			'id'   => $prefix . '_instagram',
-			'type' => 'text_url',
+			'name'				=> 'Instagram',
+			'id'				=> $prefix . '_instagram',
+			'type'				=> 'text_url',
 		) );
 	}
 
@@ -85,7 +104,7 @@
 		}
 		public function render( $field, $escaped_value, $object_id, $object_type, $field_type ) {
 			$this->setup_admin_scripts();
-	    echo $field_type->input( array( 'type' => 'text', 'class' => 'fontawesome-icon-select regular-text' ) );
+	    echo $field_type->input( array( 'type'				=> 'text', 'class'				=> 'fontawesome-icon-select regular-text' ) );
 		}
 		public function sanitize( $sanitized_val, $val ) {
 		    if ( ! empty( $val ) ) {
@@ -95,7 +114,7 @@
 		}
 		protected function setup_admin_scripts() {
 			$dir = trailingslashit( dirname( __FILE__ ) );
-			if ( 'WIN' === strtoupper( substr( PHP_OS, 0, 3 ) ) ) {
+			if ( 'WIN'				=== strtoupper( substr( PHP_OS, 0, 3 ) ) ) {
 				// Windows
 				$content_dir = str_replace( '/', DIRECTORY_SEPARATOR, WP_CONTENT_DIR );
 				$content_url = str_replace( $content_dir, WP_CONTENT_URL, $dir );
@@ -119,7 +138,7 @@
 	}
 	new KS_FontAwesome_IconPicker();
 
-remove_filter( 'pre_term_description', 'wp_filter_kses' );
-remove_filter( 'pre_link_description', 'wp_filter_kses' );
-remove_filter( 'pre_link_notes', 'wp_filter_kses' );
-remove_filter( 'term_description', 'wp_kses_data' );
+	remove_filter( 'pre_term_description', 'wp_filter_kses' );
+	remove_filter( 'pre_link_description', 'wp_filter_kses' );
+	remove_filter( 'pre_link_notes', 'wp_filter_kses' );
+	remove_filter( 'term_description', 'wp_kses_data' );

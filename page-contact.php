@@ -17,8 +17,8 @@
 	}
 }
 </style>
-<div class="row expanded small-collapse collapse" style="background: url(<?php the_post_thumbnail_url(); ?>); background-size: cover;" id="contactPage">
-	<div class="small-12 animated zoomIn" id="map"></div>
+<div class="row expanded small-collapse collapse" style="background: url(<?php the_post_thumbnail_url('bg'); ?>); background-size: cover;" id="contactPage">
+	<div class="small-12 animated fadeInUp" id="map"></div>
 </div>
 <div class="row align-top">
 	<div class="small-12 columns">

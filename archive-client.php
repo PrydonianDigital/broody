@@ -8,7 +8,7 @@
 
 			<div class="row expanded client">
 
-				<div class="small-12 medium-6 columns animated fadeInUp text-center img" style="background: url(<?php the_post_thumbnail_url(); ?>); background-size: cover;"></div>
+				<div class="small-12 medium-6 columns animated fadeInUp text-center img" style="background: url(<?php the_post_thumbnail_url('bg'); ?>); background-size: cover;"></div>
 				<div class="small-12 medium-6 columns animated fadeInUp text-center">
 					<h2><?php the_title(); ?></h2>
 					<?php the_excerpt(); ?>
