@@ -64,13 +64,13 @@ h2, h4, h6 {
 	width: 100%;
 	z-index: 1002;
 	background: rgba(255,255,255,0.9);
-	max-height: 155px;
+	height: 155px;
 	transition: all 0.5s ease-in-out
 }
 .custom-logo {
 	width: 125px;
 	height: 125px;
-	transition: all 0.5s ease;
+	transition: all 0.75s ease;
 }
 .off-canvas, .off-canvas .menu, .off-canvas .drilldown a {
 	background: #626466;
@@ -94,11 +94,11 @@ h2, h4, h6 {
 	transition: all 0.2s ease-in-out;
 }
 .closed #topBar {
-	max-height: 80px;
+	height: 80px;
 }
-.closed #topBar .logo img {
+.closed .custom-logo {
 	width: 70px;
-	height: auto;
+	height: 70px;
 }
 .logo {
 	padding: 0.9375rem;
