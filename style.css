@@ -109,7 +109,8 @@ strong, b {
 	height: 80px;
 }
 .closed .custom-logo {
-	transform: scale(0.5);
+	width: 75px;
+	height: 75px;
 	transition: all 0.5s ease-in-out;
 }
 .top-bar, .top-bar ul {
@@ -351,8 +352,20 @@ h1.primo span {
 }
 @media screen and (max-width: 1026px) {
 	.top-bar a {
-		font-size: 12px;
+		font-size: 14px;
 		padding: .5rem .75rem !important;
+	}
+	.dropdown.menu>li.is-dropdown-submenu-parent>a {
+		padding-right: 1.5rem !important;
+	}
+}
+@media screen and (max-width: 800px) {
+	.top-bar a {
+		font-size: 12px;
+		padding: .5rem .65rem !important;
+	}
+	.dropdown.menu>li.is-dropdown-submenu-parent>a {
+		padding-right: 1.2rem !important;
 	}
 }
 
