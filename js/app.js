@@ -1,5 +1,5 @@
 jQuery(document).foundation()
-jQuery(function() {
+jQuery(document).ready(function() {
 	jQuery('[data-menu-underline-from-center] li').addClass('underline-from-center');
 	jQuery('.sub-menu').attr('data-submenu');
 	jQuery('#ourStory p').wrap('<div class="column animated fadeInUp">').addClass('foo');
@@ -16,6 +16,16 @@ jQuery(function() {
 	if(element_exists(jQuery('#map'))) {
 		initMap();
 	}
+	jQuery('.faq').on('click', 'h3', function(){
+		jQuery('.answer').slideUp();
+		jQuery('h3').removeClass('open')
+		jQuery(this).addClass('open').next().slideToggle();
+	});
+	jQuery('body').imagesLoaded()
+	.done( function( instance ) {
+	    jQuery('#pageImage').addClass('loaded');
+	    jQuery('#loader').hide();
+	});
 });
 
 function initMap() {

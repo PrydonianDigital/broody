@@ -23,7 +23,7 @@
 			<div class="small-12 medium-6 large-3 columns animated fadeInUp">
 				<div class="card">
 					<div class="card-divider">
-						<h4>Oh dear...</h4>
+						<h4><a>Oh dear...</a></h4>
 					</div>
 					<div class="card-section">
 						<p>We couldn't find anything...</p>

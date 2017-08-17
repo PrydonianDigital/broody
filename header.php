@@ -61,3 +61,8 @@
 					</div>
 				</div>
 			</div>
+			<div id="loader" class="row expanded align-middle text-center">
+				<div class="small-12">
+					<img src="<?php echo $image[0]; ?>" class="animated pulse">
+				</div>
+			</div>

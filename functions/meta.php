@@ -96,6 +96,39 @@
 		) );
 	}
 
+	add_action( 'cmb2_init', 'faq_page' );
+	function faq_page() {
+		$prefix = '_faq_';
+		$cmb_faq = new_cmb2_box( array(
+			'id'				=> 'faq',
+			'title'				=> 'FAQs',
+			'object_types'		=> array( 'page' ),
+			'show_on'			=> array( 'key' => 'page-template', 'value' => 'template-faqs.php' ),
+			'show_in_rest'		=> true
+		) );
+
+		$faq_group = $cmb_faq->add_field( array(
+			'id'				=> $prefix . 'home',
+			'type'				=> 'group',
+			'options'			=> array(
+				'group_title'	=> __( 'FAQ {#}', 'bci' ),
+				'add_button'	=> __( 'Add New FAQ', 'bci' ),
+				'remove_button'	=> __( 'Remove FAQ', 'bci' ),
+				'sortable'		=> true,
+			),
+		) );
+		$cmb_faq->add_group_field( $faq_group, array(
+			'name'				=> 'FAQ Title',
+			'id'				=> $prefix . '_title',
+			'type'				=> 'text',
+		) );
+		$cmb_faq->add_group_field( $faq_group, array(
+			'name'				=> 'FAQ Content',
+			'id'				=> $prefix . '_text',
+			'type'				=> 'wysiwyg',
+		) );
+	}
+
 	class KS_FontAwesome_IconPicker {
 		const VERSION = '1.0.0';
 		public function __construct() {

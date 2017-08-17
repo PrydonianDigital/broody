@@ -4,7 +4,7 @@
 
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-			<div class="small-12 columns bg">
+			<div class="small-12 medium-8 columns bg">
 				<div class="meta">
 					<small>By <?php the_author(); ?> | <?php the_date(); ?> | <?php the_category(', '); ?></small>
 				</div>
