@@ -31,6 +31,9 @@ h2, h4, h6 {
 p, ul, ol, dl, dt, dd {
 	color: #000;
 }
+strong, b {
+	font-weight: 700;
+}
 .title-bar {
 	position: fixed !important;
 	top: 0;
@@ -89,7 +92,7 @@ p, ul, ol, dl, dt, dd {
 	background: #626466;
 	color: #fbaa3a
 }
-.off-canvas .drilldown li.current-menu-parent li.current-menu-item a  {
+.off-canvas .drilldown li.current-menu-parent li.current-menu-item a	{
 	background: #fbaa3a;
 	color: #626466
 }
@@ -97,6 +100,8 @@ p, ul, ol, dl, dt, dd {
 	border-color: transparent transparent transparent #626466;
 }
 .logo img {
+	max-width: 100%;
+	height: auto;
 	transition: all 0.2s ease-in-out;
 }
 .closed #topBar {
@@ -125,30 +130,30 @@ p, ul, ol, dl, dt, dd {
 	text-decoration: none;
 }
 .dropdown .underline-from-center {
-  position: relative;
+	position: relative;
 }
 .dropdown .underline-from-center::after {
-  content: "";
-  position: absolute;
-  top: calc(100% - 0.125rem);
-  border-bottom: 0.125rem solid #fbaa3a;
-  left: 50%;
-  right: 50%;
-  transition: all 0.5s ease;
+	content: "";
+	position: absolute;
+	top: calc(100% - 0.125rem);
+	border-bottom: 0.125rem solid #fbaa3a;
+	left: 50%;
+	right: 50%;
+	transition: all 0.5s ease;
 }
-.dropdown .current-menu-item.underline-from-center::after, .dropdown .current-menu-parent.underline-from-center::after, .dropdown .current_page_parent.underline-from-center::after  {
-  content: "";
-  position: absolute;
-  top: calc(100% - 0.125rem);
-  border-bottom: 0.125rem solid #fbaa3a;
-  left: 0;
-  right: 0;
-  transition: all 0.5s ease;
+.dropdown .current-menu-item.underline-from-center::after, .dropdown .current-menu-parent.underline-from-center::after, .tax-who-we-work-with .dropdown .current-menu-ancestor.underline-from-center::after, .single-client .dropdown .is-dropdown-submenu-parent.underline-from-center::after {
+	content: "";
+	position: absolute;
+	top: calc(100% - 0.125rem);
+	border-bottom: 0.125rem solid #fbaa3a;
+	left: 0;
+	right: 0;
+	transition: all 0.5s ease;
 }
 .dropdown .underline-from-center:hover::after {
-  left: 0;
-  right: 0;
-  transition: all 0.5s ease;
+	left: 0;
+	right: 0;
+	transition: all 0.5s ease;
 }
 .dropdown .is-dropdown-submenu a {
 	text-align: center;
@@ -169,6 +174,8 @@ p, ul, ol, dl, dt, dd {
 }
 #blogPage {
 	margin-top: 155px;
+	background-attachment: fixed !important;
+	background-position: center center !important;
 }
 h1.primo {
 	font-weight: 300;
@@ -208,7 +215,7 @@ h1.primo span {
 	overflow: hidden;
 	color: #fff;
 }
-#ourStory p:first-child {
+#ourStory .column:first-child {
 	font-weight: 700;
 }
 .card {
@@ -270,6 +277,18 @@ h1.primo span {
 #footer p {
 	color: #fff;
 }
+.comment {
+	border: 1px solid #e6e6e6;
+}
+.comment .comment {
+	padding-left: 1.874rem;
+	border: none;
+}
+.comment-content {
+	padding: 0 0.937rem;
+}
+
+
 @media screen and (max-width: 40em) {
 	#topBar {
 		display: none;
@@ -281,9 +300,9 @@ h1.primo span {
 	#wwwwPage {
 		margin: calc(50px + 1.874rem) 0 0 0;
 	}
-		#blogPage {
-			margin-top: calc(50px + 1.874rem);
-		}
+	#blogPage {
+		margin-top: 50px;
+	}
 	#ourStory p {
 		margin: 0 0 0.937rem 0;
 	}

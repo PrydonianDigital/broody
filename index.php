@@ -7,7 +7,7 @@
 			<div class="small-12 medium-6 large-3 columns animated fadeInUp">
 				<div class="card">
 					<div class="card-section">
-						<span class="badge"><?php the_category('</span><span class="badge">'); ?></span>
+						<span class="badge"><?php the_category('</span> <span class="badge">'); ?></span>
 					</div>
 					<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('card'); ?></a>
 					<div class="card-divider">
