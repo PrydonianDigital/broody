@@ -14,11 +14,11 @@ html, body {
 	height: 100%;
 }
 body {
-	font-family: 'Quicksand', sans-serif;
-	font-weight: 400;
+	font-family: 'quicksandregular', sans-serif;
+	font-weight: 300;
 }
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'Quicksand', sans-serif;
+	font-family: 'quicksandbold', sans-serif;
 }
 h1, h3, h5 {
 	color: #fbaa3a;
@@ -41,7 +41,7 @@ strong, b {
 	width: 100%;
 	padding: 5px;
 	line-height: 50px;
-	background: rgba(255,255,255,0.9);
+	background: rgba(255,255,255,0.95);
 	z-index: 1010;
 	box-shadow: 0 2px 2px rgba(0,0,0,0.25);
 }
@@ -69,7 +69,7 @@ strong, b {
 	left: 0;
 	width: 100%;
 	z-index: 1002;
-	background: rgba(255,255,255,0.9);
+	background: rgba(255,255,255,0.95);
 	height: 155px;
 	transition: all 0.5s ease-in-out
 }
@@ -79,7 +79,8 @@ strong, b {
 	transition: all 0.75s ease;
 }
 .menu {
-	font-weight: 500;
+	font-family: 'quicksandbold';
+	font-weight: 300;
 }
 .off-canvas, .off-canvas .menu, .off-canvas .drilldown a {
 	background: #626466;
@@ -108,16 +109,14 @@ strong, b {
 	height: 80px;
 }
 .closed .custom-logo {
-	width: 70px;
-	height: 70px;
-}
-.logo {
+	transform: scale(0.5);
+	transition: all 0.5s ease-in-out;
 }
 .top-bar, .top-bar ul {
 	background: transparent;
 }
 .top-bar ul .submenu {
-	background: rgba(255,255,255,0.9);
+	background: rgba(255,255,255,0.95);
 	border: 0;
 	box-shadow: 0 2px 2px rgba(0,0,0,0.25);
 	padding: 0.9375rem;
@@ -125,6 +124,10 @@ strong, b {
 .top-bar a, .dropdown.menu > li.is-dropdown-submenu-parent > a::after {
 	color: #626466;
 	border-color: #626466 transparent transparent;
+}
+.top-bar a, .dropdown.menu > li.is-dropdown-submenu-parent:hover > a::after {
+	color: #626466;
+	border-color: #fbaa3a transparent transparent;
 }
 .dropdown li a:hover {
 	text-decoration: none;
@@ -158,7 +161,28 @@ strong, b {
 .dropdown .is-dropdown-submenu a {
 	text-align: center;
 }
+#loader {
+	display: flex;
+	min-height: 100vh;
+	padding: 165px 1.875rem 0;
+}
+#loader img {
+	max-width: 125px;
+	height: auto;
+	animation-duration: 0.75s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
 #pageImage {
+	display: none;
+	min-height: 100vh;
+	padding: 165px 1.875rem 0;
+	background-attachment: fixed !important;
+	background-position: center center !important;
+	transition: all 0.5s ease;
+}
+#pageImage.loaded {
+	display: flex;
 	min-height: 100vh;
 	padding: 165px 1.875rem 0;
 	background-attachment: fixed !important;
@@ -187,8 +211,13 @@ h1.primo span {
 	color: #fff;
 	background: rgba(98,100,102,0.85);
 }
+.button {
+	font-family: 'quicksandbold';
+	font-weight: 500 !important;
+}
 .badge {
-	border-radius: 0.5rem;
+	font-family: 'quicksandbold';
+	border-radius: 0.75rem;
 	padding: 0.2rem 0.5rem;
 	background: #626466;
 }
@@ -198,7 +227,7 @@ h1.primo span {
 .wwd {
 	padding: 0.9375rem;
 	color: #fff;
-	background: rgba(98,100,102,0.85);
+	background: rgba(98,100,102,0.9);
 	box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
 	border-radius: 0.25rem;
 	overflow: hidden;
@@ -209,7 +238,7 @@ h1.primo span {
 #ourStory p {
 	padding: 0.9375rem;
 	color: #fff;
-	background: rgba(98,100,102,0.85);
+	background: rgba(98,100,102,0.9);
 	box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
 	border-radius: 0.25rem;
 	overflow: hidden;
@@ -225,7 +254,7 @@ h1.primo span {
 .post-type-archive-people .card {
 	border: 0;
 	color: #fff;
-	background: rgba(98,100,102,0.85);
+	background: rgba(98,100,102,0.9);
 	overflow: hidden;
 	color: #fff;
 }
@@ -260,8 +289,41 @@ h1.primo span {
 	padding-bottom: 0.5rem;
 	border-bottom: 1px solid #e6e6e6;
 }
-.single .bg {
+.single .bg, .page .bg, .page-template .bg {
 	background: rgba(255,255,255,0.9);
+}
+.page .bg, .page-template .bg {
+	border-radius: 0.25rem;
+}
+.faq {
+	padding: 1rem;
+}
+.faq h3 {
+	color: #626466;
+	margin: 0;
+	cursor: pointer;
+	padding-right: 2rem;
+	position: relative;
+}
+.faq h3.open {
+	color: #fbaa3a;
+	margin: 0;
+	cursor: pointer;
+}
+.faq h3:after {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 0;
+	content: '\f055';
+	font-family: 'FontAwesome';
+	transition: all 0.5s ease;
+}
+.faq h3.open:after {
+	content: '\f056';
+}
+.answer {
+	display: none;
 }
 .titleSpace {
 	border-bottom: 1px solid #e6e6e6;
@@ -287,13 +349,18 @@ h1.primo span {
 .comment-content {
 	padding: 0 0.937rem;
 }
-
+@media screen and (max-width: 1026px) {
+	.top-bar a {
+		font-size: 12px;
+		padding: .5rem .75rem !important;
+	}
+}
 
 @media screen and (max-width: 40em) {
 	#topBar {
 		display: none;
 	}
-	#pageImage {
+	#pageImage, #pageImage.loaded {
 		height: auto;
 		padding: calc(50px + 1.874rem) 0.937rem 0.937rem 0.937rem;
 	}
