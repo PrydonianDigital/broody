@@ -5,7 +5,7 @@
 			<div class="row expanded align-middle" style="background: url(<?php the_post_thumbnail_url('bg'); ?>); background-size: cover;" id="pageImage">
 				<div class="small-12">
 					<div class="row">
-						<div class="small-12">
+						<div class="small-12 homePage animated zoomIn">
 							<?php the_content(); ?>
 						</div>
 					</div>
