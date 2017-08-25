@@ -38,4 +38,10 @@
 
 	</div>
 
+	<div class="row small-up-1">
+		<div class="small-12 align-center">
+			<?php if ( function_exists('foundation_pagination') ) { foundation_pagination(); } ?>
+		</div>
+	</div>
+
 <?php get_footer(); ?>
