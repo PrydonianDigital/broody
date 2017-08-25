@@ -14,9 +14,9 @@
 				    foreach ( $terms as $term ) {
 					    ++$i;
 					    if ($i % 2 == 0){
-					        echo '<div class="row expanded client align-middle"><div class="small-12 small-push-12 medium-6 columns animated fadeInUp text-center"><h5>' . $term->name . '</h5><p>' . $term->description . '</p><p><a class="button hollow" href="' . $term->slug . '">See More</a></p></div><div class="small-12 medium-6 animated fadeInUp text-center wwwwImg"><img src="' . get_term_meta($term->term_id, '_wwww_image', 'wwww') . '"></div></div>';
+					        echo '<div class="row expanded client align-middle"><div class="small-12 small-push-12 medium-6 columns animated fadeInUp text-center"><h5>' . $term->name . '</h5><p>' . $term->description . '</p><p><a class="button" href="' . $term->slug . '">See More</a></p></div><div class="small-12 medium-6 animated fadeInUp text-center wwwwImg"><img src="' . get_term_meta($term->term_id, '_wwww_image', 'wwww') . '"></div></div>';
 					    } else {
-					        echo '<div class="row expanded client align-middle"><div class="small-12 medium-6 animated fadeInUp text-center wwwwImg"><img src="' . get_term_meta($term->term_id, '_wwww_image', 'wwww') . '"></div><div class="small-12 medium-6 columns animated fadeInUp text-center"><h5>' . $term->name . '</h5><p>' . $term->description . '</p><p><a class="button hollow" href="' . $term->slug . '">See More</a></p></div></div>';
+					        echo '<div class="row expanded client align-middle"><div class="small-12 medium-6 animated fadeInUp text-center wwwwImg"><img src="' . get_term_meta($term->term_id, '_wwww_image', 'wwww') . '"></div><div class="small-12 medium-6 columns animated fadeInUp text-center"><h5>' . $term->name . '</h5><p>' . $term->description . '</p><p><a class="button" href="' . $term->slug . '">See More</a></p></div></div>';
 						}
 				    }
 				}
