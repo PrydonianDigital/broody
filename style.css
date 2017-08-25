@@ -359,6 +359,9 @@ strong, b {
 .comment-content {
 	padding: 0 0.937rem;
 }
+#footer .widget_wpcom_social_media_icons_widget li {
+	display: inline-block;
+}
 
 .comment { border-bottom:1px dotted #666; padding:1em; }
 .comment .vcard img.avatar { border:2px solid #ccc; float:right; margin:0 0 1em 1em; }
