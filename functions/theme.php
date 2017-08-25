@@ -35,12 +35,12 @@
 		wp_enqueue_script( 'what', get_template_directory_uri() . '/js/vendor/what-input.js', false, '6.3.1', true );
 		wp_enqueue_script( 'foundation', get_template_directory_uri() . '/js/vendor/foundation.min.js', false, '6.3.1', true );
 		wp_enqueue_script( 'fontawesome', '//use.fontawesome.com/bfa003177d.js', false, '4.7.0', false );
-		wp_enqueue_script( 'imagesloaded', '//unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js', false, '4.0', false );
+		wp_enqueue_script( 'imgLoaded', '//unpkg.com/imagesloaded@4.1.3/imagesloaded.pkgd.min.js', false, '4.0', false );
 		wp_enqueue_script( 'broody', get_template_directory_uri() . '/js/app.js', false, '1', true );
 		wp_enqueue_script( 'jq' );
 		wp_enqueue_script( 'what' );
 		wp_enqueue_script( 'fontawesome' );
-		wp_enqueue_script( 'imagesloaded' );
+		wp_enqueue_script( 'imgLoaded' );
 		wp_enqueue_script( 'broody' );
 	}
 	add_action( 'wp_enqueue_scripts', 'broody_js' );

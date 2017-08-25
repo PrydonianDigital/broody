@@ -29,12 +29,6 @@ jQuery(document).ready(function() {
 		jQuery(this).addClass('open').next().slideToggle();
 	});
 
-	jQuery('body').imagesLoaded()
-	.done( function( instance ) {
-	    jQuery('#pageImage').addClass('loaded');
-	    jQuery('#loader').hide();
-	});
-
 });
 
 function initMap() {
