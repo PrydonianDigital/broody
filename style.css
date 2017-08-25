@@ -16,6 +16,7 @@ html, body {
 body {
 	font-family: 'quicksandregular', sans-serif;
 	font-weight: 300;
+	color: #505153;
 }
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'quicksandbold', sans-serif;
@@ -25,11 +26,11 @@ h1, h3, h5 {
 	font-weight: 700;
 }
 h2, h4, h6 {
-	color: #626466;
+	color: #505153;
 	font-weight: 700;
 }
 p, ul, ol, dl, dt, dd {
-	color: #000;
+	color: #505153;
 }
 strong, b {
 	font-weight: 700;
@@ -52,7 +53,7 @@ strong, b {
 	float: right;
 }
 .title-bar-title {
-	color: #626466;
+	color: #505153;
 }
 .title-bar .menu-icon {
 	width: auto;
@@ -85,22 +86,22 @@ strong, b {
 	font-weight: 300;
 }
 .off-canvas, .off-canvas .menu, .off-canvas .drilldown a {
-	background: #626466;
+	background: #505153;
 }
 .off-canvas .drilldown li.current-menu-item a, .off-canvas .drilldown li.current-menu-parent a {
 	background: #fbaa3a;
-	color: #626466
+	color: #505153
 }
 .off-canvas .drilldown li.current-menu-parent li a {
-	background: #626466;
+	background: #505153;
 	color: #fbaa3a
 }
 .off-canvas .drilldown li.current-menu-parent li.current-menu-item a	{
 	background: #fbaa3a;
-	color: #626466
+	color: #505153
 }
 .off-canvas .drilldown li.current-menu-item a::after {
-	border-color: transparent transparent transparent #626466;
+	border-color: transparent transparent transparent #505153;
 }
 .logo {
 	overflow: hidden;
@@ -130,11 +131,11 @@ strong, b {
 	padding: 0.9375rem;
 }
 .top-bar a, .dropdown.menu > li.is-dropdown-submenu-parent > a::after {
-	color: #626466;
-	border-color: #626466 transparent transparent;
+	color: #505153;
+	border-color: #505153 transparent transparent;
 }
 .top-bar a, .dropdown.menu > li.is-dropdown-submenu-parent:hover > a::after {
-	color: #626466;
+	color: #505153;
 	border-color: #fbaa3a transparent transparent;
 }
 .dropdown li a:hover {
@@ -226,7 +227,7 @@ strong, b {
 	font-family: 'quicksandbold';
 	border-radius: 0.75rem;
 	padding: 0.2rem 0.5rem;
-	background: #626466;
+	background: #505153;
 }
 .badge a {
 	color: #ffffff;
@@ -294,7 +295,7 @@ strong, b {
 	margin-bottom: 0.937rem;
 }
 .meta {
-	color: #626466;
+	color: #505153;
 	padding-top: 0.5rem;
 	padding-bottom: 0.5rem;
 	border-bottom: 1px solid #e6e6e6;
@@ -309,7 +310,7 @@ strong, b {
 	padding: 1rem;
 }
 .faq h3 {
-	color: #626466;
+	color: #505153;
 	margin: 0;
 	cursor: pointer;
 	padding-right: 2rem;
@@ -340,7 +341,7 @@ strong, b {
 	margin-bottom: 0.937rem;
 }
 #footer {
-	background: #626466;
+	background: #505153;
 	color: #fff;
 	box-shadow: inset 0 2px 2px rgba(0,0,0,0.5);
 	font-size: 85%;
@@ -373,7 +374,7 @@ strong, b {
 .comment .children li.depth-3 { border-left:2px solid #999; margin:0 0 .25em .25em; }
 .comment .children li.depth-4 { border-left:2px solid #bbb; margin:0 0 .25em .25em; }
 .even { background: rgba(255,255,255,0.5); }
-.odd { background: rgba(17,17,17,0.1); }
+.odd { background: rgba(80,81,83,0.1); }
 .parent { border-left:2px solid #111; }
 @media screen and (max-width: 1026px) {
 	.top-bar a {

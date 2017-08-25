@@ -44,7 +44,7 @@ function initMap() {
 		center: mother,
 		scrollwheel: false,
 		styles: [
-            {elementType: 'geometry', stylers: [{color: '#626466'}]},
+            {elementType: 'geometry', stylers: [{color: '#505153'}]},
             {elementType: 'labels.text.stroke', stylers: [{color: '#000000'}]},
             {elementType: 'labels.text.fill', stylers: [{color: '#fbaa3a'}]},
             {
@@ -120,7 +120,7 @@ function initMap() {
             {
               featureType: 'water',
               elementType: 'labels.text.stroke',
-              stylers: [{color: '#626466'}]
+              stylers: [{color: '#505153'}]
             }
           ]
 	});
