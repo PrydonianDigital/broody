@@ -301,7 +301,7 @@ strong, b {
 	border-bottom: 1px solid #e6e6e6;
 }
 .single .bg, .page .bg, .page-template .bg {
-	background: rgba(255,255,255,0.9);
+	background: rgba(255,255,255,0.95);
 }
 .page .bg, .page-template .bg {
 	border-radius: 0.25rem;
