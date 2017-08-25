@@ -33,6 +33,12 @@ jQuery(document).ready(function() {
 
 function initMap() {
 	var mother = {lat: 51.5240886, lng: -0.0782075};
+	var iconBase = '/wp-content/themes/broody/img/';
+	var icons = {
+		broody: {
+			icon: iconBase + 'marker.png'
+		}
+	}
 	var map = new google.maps.Map(document.getElementById('map'), {
 		zoom: 16,
 		center: mother,
@@ -118,9 +124,12 @@ function initMap() {
             }
           ]
 	});
-	var marker = new google.maps.Marker({
-		position: mother,
-		map: map
+	var image = '/wp-content/themes/broody/img/marker.png';
+	var broodyMarker = new google.maps.Marker({
+		position: {lat: 51.5240886, lng: -0.0782075},
+		map: map,
+		icon: image,
+		title: "Broody"
 	});
 }
 
