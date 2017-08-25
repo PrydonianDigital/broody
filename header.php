@@ -11,6 +11,8 @@
 
 <body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage">
 
+<!-- Site by Prydonian Digital https://prydonian.digital -->
+
 <div class="off-canvas-wrapper">
 	<div class="off-canvas position-left" id="broodyMenu" data-off-canvas>
 		<ul id="homeMenu" class="vertical menu drilldown" data-drilldown="">
