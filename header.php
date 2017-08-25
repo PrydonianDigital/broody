@@ -32,12 +32,11 @@
 		<div class="container">
 			<div class="title-bar" data-responsive-toggle="broodyMenu" data-hide-for="medium">
 				<button class="menu-icon" type="button" data-toggle="broodyMenu">
-					<?php
-						$custom_logo_id = get_theme_mod( 'custom_logo' );
-						$image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
-						echo '<img src="' . $image[0] . '">';
-					?>
+					<i class="fa fa-arrow-left" aria-hidden="true"></i> Menu
 				</button>
+				<div id="mobileLogo">
+					<?php the_custom_logo(); ?>
+				</div>
 			</div>
 			<div class="row expanded align-middle" id="topBar">
 				<div class="small-2 columns logo">
@@ -59,10 +58,5 @@
 							?>
 						</div>
 					</div>
-				</div>
-			</div>
-			<div id="loader" class="row expanded align-middle text-center">
-				<div class="small-12">
-					<img src="<?php echo $image[0]; ?>" class="animated pulse">
 				</div>
 			</div>
