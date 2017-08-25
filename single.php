@@ -8,11 +8,11 @@
 				<div class="meta">
 					<small>By <?php the_author(); ?> | <?php the_date(); ?> | <?php the_category(', '); ?></small>
 				</div>
-				<div class="row titleSpace">
-					<div class="small-12 medium-8 columns">
+				<div class="row expanded titleSpace">
+					<div class="small-12 medium-8">
 						<h2><?php the_title(); ?></h2>
 					</div>
-					<div class="small-12 medium-4 columns text-right">
+					<div class="small-12 medium-4 text-right">
 						<h2><small><?php comments_number( '0', '1', '%' ); ?> <i class="fa fa-comments" aria-hidden="true"></i></small></h2>
 					</div>
 				</div>

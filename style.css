@@ -44,6 +44,7 @@ strong, b {
 	background: rgba(255,255,255,0.95);
 	z-index: 1010;
 	box-shadow: 0 2px 2px rgba(0,0,0,0.25);
+	overflow: hidden;
 }
 .title-bar img {
 	max-height: 50px;
@@ -54,13 +55,19 @@ strong, b {
 	color: #626466;
 }
 .title-bar .menu-icon {
-	width: 40px;
+	width: auto;
 	height: 40px;
 	line-height: 40px;
 	display: block;
+	float: left;
 }
 .menu-icon::after {
 	display: none;
+}
+.title-bar #mobileLogo {
+	display: block;
+	margin: 0 auto;
+	transform: translateX(-35px);
 }
 #topBar {
 	box-shadow: 0 2px 2px rgba(0,0,0,0.25);
@@ -71,12 +78,7 @@ strong, b {
 	z-index: 1002;
 	background: rgba(255,255,255,0.95);
 	height: 155px;
-	transition: all 0.5s ease-in-out
-}
-.custom-logo {
-	width: 125px;
-	height: 125px;
-	transition: all 0.75s ease;
+	transition: all 0.5s linear;
 }
 .menu {
 	font-family: 'quicksandbold';
@@ -100,19 +102,24 @@ strong, b {
 .off-canvas .drilldown li.current-menu-item a::after {
 	border-color: transparent transparent transparent #626466;
 }
+.logo {
+	overflow: hidden;
+	transition: all 0.5s linear;
+}
 .logo img {
-	max-width: 100%;
-	height: auto;
-	transition: all 0.2s ease-in-out;
+	width: 125px;
+	height: 125px;
+	transition: all 0.5s linear;
+}
+.closed .logo img {
+	max-width: 75px;
+	height: 75px;
 }
 .closed #topBar {
 	height: 80px;
+	transition: all 0.5s linear;
 }
-.closed .custom-logo {
-	width: 75px;
-	height: 75px;
-	transition: all 0.5s ease-in-out;
-}
+
 .top-bar, .top-bar ul {
 	background: transparent;
 }
@@ -175,21 +182,13 @@ strong, b {
 	animation-timing-function: linear;
 }
 #pageImage {
-	display: none;
 	min-height: 100vh;
-	min-height: 100%;
 	padding: 165px 1.875rem 0;
 	background-attachment: fixed !important;
 	background-position: center center !important;
 	transition: all 0.5s ease;
 }
-#pageImage.loaded {
-	display: flex;
-	min-height: 100vh;
-	padding: 165px 1.875rem 0;
-	background-attachment: fixed !important;
-	background-position: center center !important;
-}
+
 #contactPage {
 	min-height: 50vh;
 	margin: 155px 0 0 0;
@@ -214,7 +213,7 @@ strong, b {
 	color: #fff;
 	background: rgba(98,100,102,0.85);
 }
-.button {
+.button, [type="submit"] {
 	font-family: 'quicksandbold';
 	font-weight: 500 !important;
 	box-shadow: inset 0 2px 0 rgba(255, 255, 255, .1), inset 0 -2px 0 rgba(0, 0, 0, .1) !important;
@@ -242,6 +241,9 @@ strong, b {
 }
 .wwd i, .wwd p {
 	color: #fff;
+}
+.wwd h2 {
+	font-size: 4rem;
 }
 #ourStory p {
 	padding: 0.9375rem;
@@ -357,6 +359,19 @@ strong, b {
 .comment-content {
 	padding: 0 0.937rem;
 }
+
+.comment { border-bottom:1px dotted #666; padding:1em; }
+.comment .vcard img.avatar { border:2px solid #ccc; float:right; margin:0 0 1em 1em; }
+.comment-meta { font-size: 0.9rem; font-weight: 700; }
+.comment { margin:0 0 1em 0; }
+.comment .reply a { font-weight:bold; }
+.comment .children { list-style:none; margin:1em 0 0; text-indent:0; }
+.comment .children li.depth-2 { border-left:2px solid #555; margin:0 0 .25em .25em; }
+.comment .children li.depth-3 { border-left:2px solid #999; margin:0 0 .25em .25em; }
+.comment .children li.depth-4 { border-left:2px solid #bbb; margin:0 0 .25em .25em; }
+.even { background: rgba(255,255,255,0.5); }
+.odd { background: rgba(17,17,17,0.1); }
+.parent { border-left:2px solid #111; }
 @media screen and (max-width: 1026px) {
 	.top-bar a {
 		font-size: 14px;
@@ -376,6 +391,9 @@ strong, b {
 	}
 	.homePage br {
 		display: none;
+	}
+	.wwd h2 {
+		font-size: 2.5rem;
 	}
 }
 

@@ -4,9 +4,9 @@
 
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-			<div class="small-12 columns bg">
-				<div class="row titleSpace">
-					<div class="small-12 columns">
+			<div class="small-12 medium-8 columns bg">
+				<div class="row expanded titleSpace">
+					<div class="small-12">
 						<h2><?php the_title(); ?></h2>
 					</div>
 				</div>
